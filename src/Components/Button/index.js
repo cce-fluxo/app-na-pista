@@ -3,7 +3,7 @@ import { ActivityIndicator } from 'react-native';
 
 import { Container, Text } from './styles';
 
-import {colors} from '../../Constants/constants';
+import { colors } from '../../Constants/constants';
 
 const Button = ({
   width,
@@ -15,7 +15,8 @@ const Button = ({
   onPress,
   color,
   background,
-  border
+  border,
+  size,
 }) => {
   return (
     <Container
@@ -31,7 +32,7 @@ const Button = ({
       {loading ? (
         <ActivityIndicator color={colors.background} size={'small'} />
       ) : (
-        <Text> {text}</Text>
+        <Text size={size}> {text}</Text>
       )}
     </Container>
   );
